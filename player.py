@@ -43,7 +43,7 @@ class Player:
     def remove_fuellevel(self, fuel):
         self.curr_fuellevel -= fuel
 
-    def move_money(self, money):
+    def remove_money(self, money):
         self.curr_money -= money
 
     # Data retrieval functions
