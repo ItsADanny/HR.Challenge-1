@@ -51,6 +51,9 @@ class Player:
     def get_curr_rocketparts_list(self):
         return self.curr_rocketparts_list
 
+    def get_curr_rocketparts_pos(self, pos):
+        return self.curr_rocketparts_list[pos]
+
     def get_curr_fuellevel(self):
         return self.curr_fuellevel
 
