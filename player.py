@@ -11,6 +11,7 @@
 class Player:
     def __init__(self):
         self.username = ""
+        self.playername = ""
         self.curr_rocketparts_list = []
         self.curr_fuellevel = 0
         self.curr_money = 0
@@ -21,6 +22,10 @@ class Player:
 
     def set_username(self, username):
         self.username = username
+
+    def set_playername(self, playername):
+        self.playername = playername
+
     def add_rocketparts(self, item):
         self.curr_rocketparts_list.append(item)
 
@@ -47,6 +52,12 @@ class Player:
         self.curr_money -= money
 
     # Data retrieval functions
+
+    def get_username(self):
+        return self.username
+
+    def get_playername(self):
+        return self.playername
 
     def get_curr_rocketparts_list(self):
         return self.curr_rocketparts_list

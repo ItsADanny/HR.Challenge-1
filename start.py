@@ -32,6 +32,7 @@ while not valid_player:
             temp_playername = input(f"<{colorama.Fore.BLUE}SYSTEM{colorama.Style.RESET_ALL}>  Player {(i + 1)} what is your name? : ")
             new_player = player.Player()
             new_player.set_username(temp_playername)
+            new_player.set_playername(f"p{(i + 1)}")
             players.append(new_player)
         valid_player = True
     else:
@@ -44,8 +45,6 @@ game_running = True
 
 while game_running:
     for i in players:
-        functions.gen_board(players)
-
         can_create_rocket = functions.rocketcheck(i)
         can_fuel_rocket = functions.rocketfuelcheck(i)
         if can_create_rocket and can_fuel_rocket:
@@ -61,18 +60,13 @@ while game_running:
                         launch_rocket = False
                         valid_rocketlaunch_reponse = True
                 else:
-                    print(f"<{colorama.Fore.RED}SYSTEM{colorama.Style.RESET_ALL}> {colorama.Fore.RED}INVALID INPUT, PLEASE GIVE A VALID INPUT")
-                    time.sleep(5)
-                    os.system("cls")
+                    print(f"<{colorama.Fore.RED}SYSTEM{colorama.Style.RESET_ALL}> {colorama.Fore.RED}INVALID INPUT, PLEASE GIVE A VALID INPUT{colorama.Style.RESET_ALL}")
         elif can_create_rocket and not can_create_rocket:
             curr_fuellevel = i.get_curr_fuellevel()
             if curr_fuellevel >= 90:
                 print(f"<{colorama.Fore.RED}SYSTEM{colorama.Style.RESET_ALL}> {colorama.Fore.RED}REQUIRED FUEL LEVEL NEARLY ACQUIRED. NEEDED FUEL UNTIL ABLE TO LAUNCH{colorama.Style.RESET_ALL} : \"{colorama.Fore.RED + (curr_fuellevel - 100) + colorama.Style.RESET_ALL}\"")
         else:
-
-
-            # TODO : THE REST OF THE GAME WILL HAPPEN HERE
-            print("The rest of the game")
+            functions.board(i)
 
             i.update_turns_used()
 
