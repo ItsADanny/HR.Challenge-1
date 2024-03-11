@@ -29,7 +29,7 @@ def introscreen():
     else:
         random_number = "69420"
 
-    space_port = colorama.Fore.GREEN + "SPACE CENTER: " + colorama.Fore.BLUE + dialogue.spaces_centers[select_space_center] + colorama.Fore.GREEN + " - COMMUNICATION SYSTEMS - COMMUNICATION POD: " + colorama.Fore.CYAN + "#" + random_number + colorama.Style.RESET_ALL
+    space_port = f"{colorama.Fore.GREEN}SPACE CENTER:{colorama.Fore.BLUE} {dialogue.spaces_centers[select_space_center]}{colorama.Fore.GREEN} - COMMUNICATION SYSTEMS - COMMUNICATION POD: {colorama.Fore.CYAN}#{random_number}{colorama.Style.RESET_ALL}"
 
     underscore = ""
     while len(space_port) != len(underscore):
@@ -37,20 +37,19 @@ def introscreen():
 
     print(space_port)
     print(underscore)
-    print(
-        f"<{colorama.Fore.BLUE + "SYSTEM" + colorama.Style.RESET_ALL}>  USER:<{colorama.Fore.CYAN + "Unknown" + colorama.Style.RESET_ALL}> CONNECTED TO COMMUNICATION SYSTEMS - ACCESS LEVEL: {colorama.Fore.RED}UNKNOWN{colorama.Style.RESET_ALL}")
+    print(f"<{colorama.Fore.BLUE}SYSTEM{colorama.Style.RESET_ALL}> USER:<{colorama.Fore.CYAN}Unknown{colorama.Style.RESET_ALL}> CONNECTED TO COMMUNICATION SYSTEMS - ACCESS LEVEL: {colorama.Fore.RED}UNKNOWN{colorama.Style.RESET_ALL}")
     for i in intro:
         time.sleep(3)
-        print(f"<{colorama.Fore.CYAN + "Unknown" + colorama.Style.RESET_ALL}> {i}")
+        print(f"<{colorama.Fore.CYAN}Unknown{colorama.Style.RESET_ALL}> {i}")
 
     time.sleep(5)
-    print(f"<{colorama.Fore.BLUE + "SYSTEM" + colorama.Style.RESET_ALL}>  USER:<{colorama.Fore.CYAN + "Unknown" + colorama.Style.RESET_ALL}> DISCONNECTED FROM COMMUNICATION SYSTEMS")
+    print(f"<{colorama.Fore.BLUE}SYSTEM{colorama.Style.RESET_ALL}>  USER:<{colorama.Fore.CYAN}Unknown{colorama.Style.RESET_ALL}> DISCONNECTED FROM COMMUNICATION SYSTEMS")
     time.sleep(5)
-    con_input = input("Press ENTER to continue...")
-    print(f"<{colorama.Fore.RED + "SYSTEM" + colorama.Style.RESET_ALL}>  {colorama.Fore.RED}ERROR{colorama.Style.RESET_ALL}: {colorama.Fore.RED}REMOTE SYSTEM BREACHED COMMUNICATIONS SYSTEM{colorama.Style.RESET_ALL}")
+    input("Press ENTER to continue...")
+    print(f"<{colorama.Fore.RED}SYSTEM{colorama.Style.RESET_ALL}>  {colorama.Fore.RED}ERROR{colorama.Style.RESET_ALL}: {colorama.Fore.RED}REMOTE SYSTEM BREACHED COMMUNICATIONS SYSTEM{colorama.Style.RESET_ALL}")
     time.sleep(2)
-    print(f"<{colorama.Fore.RED + "SYSTEM" + colorama.Style.RESET_ALL}>  {colorama.Fore.RED}REMOTE COMMAND RECEIVED{colorama.Style.RESET_ALL}, COMMAND GIVEN: {colorama.Fore.RED}SUDO DELETE_MESSAGES{colorama.Style.RESET_ALL}, AUTHORITY: {colorama.Fore.MAGENTA}SYSTEM_ADMIN{colorama.Style.RESET_ALL}")
-    print(f"<{colorama.Fore.RED + "SYSTEM" + colorama.Style.RESET_ALL}>  {colorama.Fore.RED + "DELETING ALL MESSAGES" + colorama.Style.RESET_ALL}")
+    print(f"<{colorama.Fore.RED}SYSTEM{colorama.Style.RESET_ALL}>  {colorama.Fore.RED}REMOTE COMMAND RECEIVED{colorama.Style.RESET_ALL}, COMMAND GIVEN: {colorama.Fore.RED}SUDO DELETE_MESSAGES{colorama.Style.RESET_ALL}, AUTHORITY: {colorama.Fore.MAGENTA}SYSTEM_ADMIN{colorama.Style.RESET_ALL}")
+    print(f"<{colorama.Fore.RED}SYSTEM{colorama.Style.RESET_ALL}>  {colorama.Fore.RED}DELETING ALL MESSAGES{colorama.Style.RESET_ALL}")
     time.sleep(5)
 
 def menuscreen():
@@ -513,9 +512,11 @@ def board(curr_player):
 
     step_count = 0
     player_display = curr_player.get_playername()
+    player_username = curr_player.get_username()
 
     while True:
         time.sleep(3)
+        print(f"<{colorama.Fore.CYAN}SYSTEM{colorama.Style.RESET_ALL}> It's <{colorama.Fore.YELLOW}{player_username}{colorama.Style.RESET_ALL}> ({colorama.Fore.GREEN}{player_display}{colorama.Style.RESET_ALL}) turn\n")
         user = input(">Use Enter to roll: ")
         if user == "":
             step_count += dice_single()
@@ -551,5 +552,41 @@ def board(curr_player):
                 break
             else:
                 break
+            os.system("cls")
         else:
             print(">Please use Enter!")
+
+
+def ending(player):
+    player_username = player.get_username()
+
+    select_space_station = random.randint(0, 19)
+
+    random_number = ""
+    while len(random_number) != 5:
+        random_int = random.randint(0, 9)
+        random_number += str(random_int)
+
+    space_port = f"{colorama.Fore.GREEN}SPACE STATION:{colorama.Fore.BLUE} {dialogue.spaces_station[select_space_station]}{colorama.Fore.GREEN} - COMMUNICATION SYSTEMS - COMMUNICATION POD: {colorama.Fore.CYAN}#{random_number}{colorama.Style.RESET_ALL}"
+
+    underscore = ""
+    while len(space_port) != len(underscore):
+        underscore += "-"
+
+    print(space_port)
+    print(underscore)
+
+    time.sleep(3)
+    print(f"<{colorama.Fore.CYAN + "Unknown" + colorama.Style.RESET_ALL}> Congratulations! <{colorama.Fore.YELLOW}{player_username}{colorama.Style.RESET_ALL}>")
+    time.sleep(3)
+    print(f"<{colorama.Fore.CYAN + "Unknown" + colorama.Style.RESET_ALL}> You have defied the odds and emerged victorious on this adventure")
+    time.sleep(3)
+    print(f"<{colorama.Fore.CYAN + "Unknown" + colorama.Style.RESET_ALL}> The engines of your newly-built space craft roar to life")
+    time.sleep(3)
+    print(f"<{colorama.Fore.CYAN + "Unknown" + colorama.Style.RESET_ALL}> You take a final glance at the planet, the trials and tribulations of your journey")
+    time.sleep(3)
+    print(f"<{colorama.Fore.CYAN + "Unknown" + colorama.Style.RESET_ALL}> And so you left, in love with a new passion: to explore")
+    time.sleep(5)
+    print(f"<{colorama.Fore.BLUE + "SYSTEM" + colorama.Style.RESET_ALL}>  USER:<{colorama.Fore.CYAN + "Unknown" + colorama.Style.RESET_ALL}> DISCONNECTED FROM COMMUNICATION SYSTEMS")
+    time.sleep(5)
+    print("THANKS YOU FOR PLAYING OUR GAME")

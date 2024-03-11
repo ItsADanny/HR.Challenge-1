@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2befed6a-b104-4bbd-9be4-7dbc2b86fe7e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TRIVIA-DICS.py" beforeDir="false" afterPath="$PROJECT_DIR$/trivia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dialogue.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogue.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +75,9 @@
       <updated>1709647212506</updated>
       <workItem from="1709647213546" duration="2944000" />
       <workItem from="1709715143086" duration="31001000" />
-      <workItem from="1709812475301" duration="31367000" />
+      <workItem from="1709812475301" duration="31969000" />
+      <workItem from="1709990668901" duration="1023000" />
+      <workItem from="1710088417929" duration="4242000" />
     </task>
     <servers />
   </component>
@@ -94,6 +92,6 @@
     <SUITE FILE_PATH="coverage/HR_Challenge1_Boardgame$dialogue.coverage" NAME="dialogue Coverage Results" MODIFIED="1709805247302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HR_Challenge1_Boardgame$player.coverage" NAME="player Coverage Results" MODIFIED="1709807322754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HR_Challenge1_Boardgame$functions.coverage" NAME="functions Coverage Results" MODIFIED="1709907403004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/HR_Challenge1_Boardgame$start.coverage" NAME="start Coverage Results" MODIFIED="1709910309737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HR_Challenge1_Boardgame$start.coverage" NAME="start Coverage Results" MODIFIED="1710155989364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
